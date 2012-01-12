@@ -4,6 +4,7 @@
   , "private": true
   , "dependencies": {
       "express": "2.5.5"
+    , "express-resource": "0.2.4"
     , "jade": ">= 0.0.1"
   }
 }
