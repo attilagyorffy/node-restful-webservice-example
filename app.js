@@ -5,7 +5,8 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , Config = require('./lib/config');
+  , Config = require('./lib/config')
+  , Resource = require('express-resource');
 
 var app = module.exports = express.createServer();
 
