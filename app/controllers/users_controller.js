@@ -1,27 +1,29 @@
-exports.index = function(req, res){
-  res.send('index');
-};
+module.exports = {
+  index: function(request, response) {
+    response.send('index');
+  },
 
-exports.new = function(req, res){
-  res.send('new');
-};
+  new: function(request, response) {
+    response.send('new');
+  },
 
-exports.create = function(req, res){
-  res.send('create');
-};
+  create: function(request, response) {
+    response.send('create');
+  },
 
-exports.show = function(req, res){
-  res.send('show');
-};
+  show: function(request, response) {
+    response.send('show');
+  },
 
-exports.edit = function(req, res){
-  res.send('edit');
-};
+  edit: function(request, response) {
+    response.send('edit');
+  },
 
-exports.update = function(req, res){
-  res.send('update');
-};
+  update: function(request, response) {
+    response.send('update');
+  },
 
-exports.destroy = function(req, res){
-  res.send('destroy');
+  destroy: function(request, response) {
+    response.send('destroy');
+  }
 };
