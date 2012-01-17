@@ -12,4 +12,6 @@ The aim is to have a sample application for people that are new to the Node.js w
 
 NOTE: This is a work in progress. Contributions and/or suggestions are welcome.
 
+Copyright notice: Some of the code is loosely based on [matagus's webservice example](https://github.com/matagus/node-webservice-example)
+
 [![Build Status](https://secure.travis-ci.org/liquid/node-restful-webservice-example.png)](http://travis-ci.org/liquid/node-restful-webservice-example)
