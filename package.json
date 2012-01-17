@@ -9,5 +9,8 @@
   }
   , "devDependencies": {
       "vows": "*"
+  },
+  "scripts": {
+    "test": "vows --spec"
   }
 }
