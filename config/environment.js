@@ -1,4 +1,4 @@
-var app = require('../app');
+var app = require('../server');
 var express = require('express');
 
 app.configure(function(){
