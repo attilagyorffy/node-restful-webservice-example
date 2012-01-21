@@ -1,4 +1,4 @@
-/* Copy this to ./config/config.json and fill out the necessary information */
+/* Copy this to ./config/application.json and fill out the necessary information */
 
 {
   "title": "My node.js webservice",
