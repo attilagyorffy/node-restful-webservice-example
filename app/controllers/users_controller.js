@@ -1,29 +1,37 @@
+var User = require('../models/user');
+var util = require('util');
+
 module.exports = {
   index: function(request, response) {
-    response.send('index');
+    response.send('users#index');
   },
 
   new: function(request, response) {
-    response.send('new');
+    response.send('users#new');
   },
 
   create: function(request, response) {
-    response.send('create');
+    response.send('users#create');
   },
 
   show: function(request, response) {
-    response.send('show');
+    var user = util.inspect(request.user);
+    response.send('users#show: ' + user);
   },
 
   edit: function(request, response) {
-    response.send('edit');
+    var user = util.inspect(request.user);
+    response.send('users#edit: ' + user);
   },
 
   update: function(request, response) {
-    response.send('update');
+    response.send('users#update');
   },
 
   destroy: function(request, response) {
-    response.send('destroy');
+    response.send('users#destroy');
+  },
+  load: function(id, callback) {
+    callback(null, User.find(id))
   }
 };
