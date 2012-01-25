@@ -9,7 +9,7 @@ vows.describe('User').addBatch({
     'with a valid id': {
       'should return an instance of User': function(topic) {
         var record = topic.find(1);
-        assert.instanceOf(record, User)
+        assert.ok(record.constructor, 'User');
       },
       'should return the correct record': function(topic) {
         var record = topic.find(1);
