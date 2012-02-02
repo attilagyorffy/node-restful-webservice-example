@@ -15,8 +15,9 @@ module.exports = {
   },
 
   show: function(request, response) {
-    var user = util.inspect(request.user);
-    response.send('users#show: ' + user);
+    response.render('show', {
+      user: request.user,
+    });
   },
 
   edit: function(request, response) {
