@@ -19,5 +19,15 @@ module.exports = {
       }
     }
     return null;
+  },
+  find_by_name: function(name) {
+    name = name.toLowerCase();
+    for (var i in simple_database) {
+      var record = simple_database[i];
+      if (record.name.toLowerCase() == name) {
+        return new User(record);
+      }
+    }
+    return null;
   }
 }

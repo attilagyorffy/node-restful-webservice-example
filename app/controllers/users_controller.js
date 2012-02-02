@@ -31,7 +31,7 @@ module.exports = {
   destroy: function(request, response) {
     response.send('users#destroy');
   },
-  load: function(id, callback) {
-    callback(null, User.find(id))
+  load: function(name, callback) {
+    callback(null, User.find_by_name(name))
   }
 };
