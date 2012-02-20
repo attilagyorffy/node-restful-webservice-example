@@ -1,14 +1,14 @@
-var User = function User(parameters) {
-  for (var i in parameters) {
-    this[i] = parameters[i];
-  }
-};
-
 var simple_database = [
   { id: 1, name: "Attila" },
   { id: 2, name: "Dain" },
   { id: 3, name: "Rob" }
 ];
+
+var User = function User(parameters) {
+  for (var i in parameters) {
+    this[i] = parameters[i];
+  }
+};
 
 module.exports = {
   find: function(id) {
