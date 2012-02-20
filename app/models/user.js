@@ -10,24 +10,25 @@ var User = function User(parameters) {
   }
 };
 
-module.exports = {
-  find: function(id) {
-    for (var i in simple_database) {
-      var record = simple_database[i];
-      if (record.id == id) {
-        return new User(record);
-      }
+User.prototype.find = function find(id) {
+  for (var i in simple_database) {
+    var record = simple_database[i];
+    if (record.id == id) {
+      return new User(record);
     }
-    return null;
-  },
-  find_by_name: function(name) {
-    name = name.toLowerCase();
-    for (var i in simple_database) {
-      var record = simple_database[i];
-      if (record.name.toLowerCase() == name) {
-        return new User(record);
-      }
-    }
-    return null;
   }
-}
+  return null;
+};
+
+User.prototype.find_by_name = function find_by_name(name) {
+  name = name.toLowerCase();
+  for (var i in simple_database) {
+    var record = simple_database[i];
+    if (record.name.toLowerCase() == name) {
+      return new User(record);
+    }
+  }
+  return null;
+};
+
+module.exports = User;

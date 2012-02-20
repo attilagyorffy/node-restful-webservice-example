@@ -7,19 +7,25 @@ vows.describe('User').addBatch({
   '.find': {
     topic: User,
     'with a valid id': {
-      'should return an instance of User': function(topic) {
-        var record = topic.find(1);
-        assert.ok(record.constructor, 'User');
-      },
-      'should return the correct record': function(topic) {
-        var record = topic.find(1);
-        assert.equal(record.id, 1);
-        assert.equal(record.name, 'Attila');
+      'should return the correct record': {
+        topic: function(topic) {
+          return topic.find(1);
+        },
+        'should return an instance of User': function (record) {
+          assert.instanceOf(record, User);
+          this.callback();
+        },
+        'should return the correct record': function(record) {
+          assert.equal(record.id, 1);
+          assert.equal(record.name, 'Attila');
+          this.callback();
+        }
       }
     },
     'with an invalid id': function(topic) {
       var actual = topic.find('invalid');
       assert.equal(actual, null);
+      this.callback();
     }
   }
 }).exportTo(module);
