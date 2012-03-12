@@ -4,9 +4,9 @@ var simple_database = [
   { id: 3, name: "Rob" }
 ];
 
-var User = function User(parameters) {
-  for (var i in parameters) {
-    this[i] = parameters[i];
+var User = function User(attr) {
+  for (var i in attr) {
+    this[i] = attr[i];
   }
 };
 
