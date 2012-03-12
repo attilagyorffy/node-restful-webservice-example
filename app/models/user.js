@@ -24,7 +24,7 @@ User.prototype.find_by_name = function find_by_name(name) {
   name = name.toLowerCase();
   for (var i in simple_database) {
     var record = simple_database[i];
-    if (record.name.toLowerCase() == name) {
+    if (record.name.toLowerCase() === name) {
       return new User(record);
     }
   }
