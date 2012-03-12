@@ -31,4 +31,4 @@ User.prototype.find_by_name = function find_by_name(name) {
   return null;
 };
 
-module.exports = User;
+module.exports = User.prototype;
